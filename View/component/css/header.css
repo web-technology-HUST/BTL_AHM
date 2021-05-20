@@ -1,0 +1,137 @@
+*:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif, Verdana, arial;
+}
+
+.header {
+    margin: auto;
+}
+
+/* header-top */
+.hd-top {
+    display: flex;
+}
+
+.hd-left, .hd-mid, .hd-right {
+    flex-grow: 4;
+}
+
+.hd-right {
+    text-align: right;
+}
+
+.hd-top a {
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.hd-top a:hover {
+    color: rgb(243, 82, 82);
+}
+
+.hd-top i {
+    color: rgb(243, 82, 82);
+    margin-right: 5px;
+}
+
+.user {
+    display: inline-block;
+    position: relative;
+}
+
+.user-setting {
+    display: none;
+    border-radius: 6px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 2px -2px 10px rgb(201, 198, 198);
+    transition: 2s linear;
+    width: 180%;
+    text-align: left;
+}
+
+.user-setting a {
+    margin: 0;
+    padding: 10px;
+    display: block;
+    border-bottom: solid 1px rgba(122, 120, 120, 0.151);  
+}
+
+.user-title {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.user-title:hover {
+    color: rgb(243, 82, 82);
+}
+
+.user:hover .user-setting {
+    display: block;
+}
+
+/* Search form */
+.search form{
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
+    display: flex;
+    padding: 5px;
+    transition: 0.5s;
+    width: 80%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#search-field {
+    border: none;
+    flex-basis: 90%;
+}
+
+.search-button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* header nav bar */
+.hd-navigation-collection {
+    border-top: solid 0.5px rgba(128, 128, 128, 0.308);
+    border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
+}
+
+.hd-navigation-collection ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hd-navigation-collection li {
+    float: left;
+    padding: 14px 16px;
+}
+
+.hd-navigation-collection li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    transition: 0.2s linear;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(243, 82, 82, 0);
+}
+
+.hd-navigation-collection a:hover {
+    border-bottom: 1px solid rgba(243, 82, 82);
+    color: rgb(243, 82, 82);
+}
