@@ -9,6 +9,7 @@
 }
 
 .header {
+    width: 95%;
     margin: auto;
 }
 
@@ -105,7 +106,6 @@
 /* header nav bar */
 .hd-navigation-collection {
     border-top: solid 0.5px rgba(128, 128, 128, 0.308);
-    border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
 }
 
 .hd-navigation-collection ul {
@@ -127,7 +127,6 @@
     text-align: center;
     color: black;
     transition: 0.2s linear;
-    padding: 4px 0;
     border-bottom: 1px solid rgba(243, 82, 82, 0);
 }
 
