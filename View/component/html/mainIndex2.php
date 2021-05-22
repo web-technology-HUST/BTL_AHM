@@ -1,5 +1,5 @@
 <style>
-    <?php include '../css/productHighlights.css' ?>
+    <?php include '../css/mainIndex2.css' ?>
 </style>
 <div class="main-index-2">
     <div class="container">
@@ -15,11 +15,9 @@
             </div>
             <div class="item-main-index-2">
                 <?php 
-                    include '../html/productDetail.php';
-                    include '../html/productDetail.php';
-                    include '../html/productDetail.php';
-                    include '../html/productDetail.php';
-                    include '../html/productDetail.php';
+                    for ($i = 0; $i < 8; $i++) {
+                        include '../html/productDetail.php';
+                    }    
                 ?>
             </div>
         </div>
