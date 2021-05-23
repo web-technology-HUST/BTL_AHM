@@ -9,13 +9,13 @@
         }
 
         * {
+            box-sizing: border-box;
             font-size: 16px;
             font-family: sans-serif, Verdana, arial;
         }
 
         body {
             width: 100%;
-            box-sizing: border-box;
             margin: 0 auto;
             padding-top: 20px;
         }

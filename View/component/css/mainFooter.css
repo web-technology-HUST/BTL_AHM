@@ -5,6 +5,7 @@
 } */
 
 .main-footer {
+    border-top: 2px solid rgb(243, 82, 82);
     margin: 0 auto;
 }
 
