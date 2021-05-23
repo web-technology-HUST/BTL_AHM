@@ -45,6 +45,7 @@
         }
         // Chinh sua tai khoan
         function update($id, $data) {
+            $time = date("Y-m-d H:i:s");
             $connect = $this->connect();
             $query = "update users set ".
                         "name = '".$data['name']."',".
@@ -73,7 +74,7 @@
 
     // store
     $data = [
-        'name' => 'Ngo Duc Minh Minh',
+        'name' => 'Minh',
         'email' => 'ndminh@gmail.com',
         'password' => '123456',
         'phone' => '0394076666',
@@ -89,6 +90,9 @@
     // print_r($testUser->show(1));
 
     //update
-    // print_r($testUser->update(7, $data));
+    print_r($testUser->update(7, $data));
+
+    // echo date("Y-m-d H:i:s");
+    // echo getdate();
 
 ?>
