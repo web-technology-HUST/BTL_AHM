@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trang chủ</title>
+    <title>Document</title>
+</head>
+<body>
     <style>
         *:focus {
             outline: none;
@@ -29,14 +31,10 @@
             background: rgb(243, 82, 82);
         }
     </style>
-</head>
-<body>
-    <div class="main-container">
+    <div>
         <?php 
             include '../html/header.php';
-            include '../html/slideshow.php';
-            include '../html/mainIndex1.php';
-            include '../html/mainIndex2.php';
+            include '../html/showAllProductDetail.php';
             include '../html/mainFooter.php';
         ?>
     </div>

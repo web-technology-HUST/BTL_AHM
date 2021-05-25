@@ -54,7 +54,7 @@
         x.parentNode.style.borderColor = "rgba(122, 120, 120, 0.151)";
     }
 
-    var isLogin = false;
+    var isLogin = true;
     if (isLogin) {
         document.getElementById("loginid").style.display = "none";
         document.getElementById("userid").style.display = "inline-block";
@@ -69,6 +69,21 @@
     window.onclick = function (event) {
         if (event.target == loginId) {
             loginId.style.display = "none";
+        }
+    }
+    window.onscroll = function() {scrollFunction()};
+
+    var navigationBar = document.getElementById("navbar");
+    var logo = document.getElementById("logo-nav");
+    var stickyPosition = navigationBar.offsetTop;
+
+    function scrollFunction() {
+        if (window.pageYOffset >= stickyPosition) {
+            navigationBar.classList.add("sticky")
+            logo.style.display = "block"
+        } else {
+            navigationBar.classList.remove("sticky");
+            logo.style.display = "none"
         }
     }
 </script>

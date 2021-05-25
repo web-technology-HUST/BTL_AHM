@@ -115,14 +115,15 @@
     z-index: 3;
     background-color: white;
     height: 70px;
+    border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
+    box-shadow: 0 3px 2px rgba(128, 128, 128, 0.308);
 }
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
-    box-shadow: 0 3px 2px rgba(128, 128, 128, 0.308);
+    
 }
 
 .hd-navigation-collection ul {

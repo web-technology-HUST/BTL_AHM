@@ -4,6 +4,12 @@
     font-family: sans-serif, Verdana, arial;
 } */
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .main-footer {
     border-top: 2px solid rgb(243, 82, 82);
     margin: 0 auto;
@@ -15,7 +21,6 @@
     display: flex;
     padding-top: 20px;
     margin-bottom: 20px;
-    border-top: solid 1px rgba(122, 120, 120, 0.151);
     border-bottom: solid 1px rgba(122, 120, 120, 0.151);
 }
 
