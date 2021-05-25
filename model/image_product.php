@@ -1,7 +1,7 @@
 <?php
     require_once('db.php');
 
-    class Img_Product extends DBModel {
+    class Image_Product extends DBModel {
         const PATH_STORE = '../upload/img_product/';
         const PATH_RETURN = '..upload/img_product';
 
@@ -50,7 +50,7 @@
     }
 
 
-    $testImg_Product = new Img_Product();
+    $testImg_Product = new Image_Product();
     // test index
     // print_r($testImg_Product->index(2));
     // $data = [
