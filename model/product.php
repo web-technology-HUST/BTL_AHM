@@ -51,7 +51,8 @@
                         "material = '".$data['material']."',".
                         "price = '".$data['price']."',".
                         "amount = '".$data['amount']."',".
-                        "state = '".$data['state']."' where id = $id";
+                        "state = '".$data['state']."',".
+                        "updated_at = '".date('Y-m-d H:i:s')."' where id = $id";
             $result = $connect->query($query);
             if($result) {
                 return "Chinh sua san pham thanh cong";
@@ -79,7 +80,7 @@
 
     $data = [
         'category_id' => '1',
-        'name' => 'Kim cuong xin vkl',
+        'name' => 'Kim cuong xin vkl llldsfl',
         'description' => 'kim cuong xin nen d mo ta nhieu',
         'material' => 'kim cuong 100%',
         'price'  => 1999999,
@@ -94,8 +95,8 @@
     // print_r($testProduct->show(1));
 
     // test update
-    // print_r($testProduct->update(18, $data))
-
+    print_r($testProduct->update(26, $data));
+    // echo date('Y-m-d H:i:s').'.000000';
     // test delete
     // print_r($testProduct->destroy(18));
 
