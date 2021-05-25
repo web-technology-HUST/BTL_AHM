@@ -31,7 +31,7 @@
 
         function update($id, $data) {
             $connect = $this->connect();
-            $query = "update comments set content = '".$data['content']."' where id = $id";
+            $query = "update comments set content = '".$data['content']."', updated_at = '".date('Y-m-d H:i:s')."' where id = $id";
             $result = $connect->query($query);
             if($result) {
                 return "Chinh sua binh luan thanh cong";
@@ -60,7 +60,7 @@
         'product_id' => 1,
         'content' => 'san pham cuc ki dep pppp',
     ];
-    print_r($testComment->store($data));
-    // print_r($testComment->update(5, $data));
+    // print_r($testComment->store($data));
+    print_r($testComment->update(6, $data));
     // print_r($testComment->destroy(5))
 ?>

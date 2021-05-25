@@ -50,7 +50,8 @@
 
         function update($id, $state) {
             $connect = $this->connect();
-            $result = $connect->query("update orders set state = $state where id = $id");
+            $query = "update orders set state = $state , updated_at = '".date('Y-m-d H:i:s')."' where id = $id";
+            $result = $connect->query($query);
             if($result) {
                 return "Chinh sua thong tin don hang thanh cong";
             }
@@ -58,8 +59,6 @@
                 return "Chinh sua thong tin don hang that bai";
             }
         }
-
-        
     }
 
     $testOder = new Order();
@@ -70,5 +69,5 @@
     ];
     // print_r($testOder->store($data));
     // print_r($testOder->listOrderOfUser(2));
-    print_r($testOder->update(2, 3));
+    print_r($testOder->update(3, 2));
 ?>

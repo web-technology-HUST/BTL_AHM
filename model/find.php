@@ -30,6 +30,14 @@
                     $users[] = $find3;
                 }
             }
+            // tim theo sdt
+            $query4 = "select * from users where phone like '%".$str."%'";
+            $result4 = $connect->query($query4);
+            if ($result4->num_rows > 0) {
+                while ($find4 = mysqli_fetch_assoc($result4)) {
+                    $users[] = $find4;
+                }
+            }
             return $users;
         }
 
@@ -74,12 +82,12 @@
 
     $testFind = new Find();
     // test findUser
-    // var_dump($testFind->findUser('ha noi'));
+    var_dump($testFind->findUser('039'));
 
     // test findProductByCategory
     // var_dump($testFind->findProductByCategory(1));
 
     // test findProduct
-    var_dump($testFind->findProduct('kim cương'));
+    // var_dump($testFind->findProduct('kim cương'));
 
 ?>

@@ -56,7 +56,8 @@
                         "birthday = '".$data['birthday']."',".
                         "address = '".$data['address']."',".
                         "role = '".$data['role']."',".
-                        "state = '".$data['state']."' where id = $id";
+                        "state = '".$data['state']."',".
+                        "updated_at = '".date('Y-m-d H:i:s')."' where id = $id";
             $result = $connect->query($query);
             if($result) {
                 return "Chinh sua thong tin tai khoan thanh cong";
