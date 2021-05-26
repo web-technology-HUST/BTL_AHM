@@ -74,7 +74,7 @@
         }
     }
 
-    $testProduct = new Product();
+    // $testProduct = new Product();
     //test index
     // print_r($testProduct->index());
 
@@ -95,9 +95,16 @@
     // print_r($testProduct->show(1));
 
     // test update
-    print_r($testProduct->update(26, $data));
+    // print_r($testProduct->update(26, $data));
     // echo date('Y-m-d H:i:s').'.000000';
     // test delete
     // print_r($testProduct->destroy(18));
 
+    // if(isset($_POST['submit'])) {
+    //     echo $_FILES["fileToUpload"]["name"];
+    //     $target_file = "../upload/img_product/".$_FILES["fileToUpload"]["name"];
+    //     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+    // }
+
 ?>
+

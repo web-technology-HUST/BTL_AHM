@@ -19,8 +19,12 @@
             return $imgs;
         }
         // Them anh cho san pham
-        function store($product_id, $data, $file_img) {
-            move_uploaded_file($file_img, self::PATH_STORE.$data['link']);
+        function store($product_id, $data, $file) {
+            $link = self::PATH_STORE.$data['link'];
+            $check_file = $link.$_FILES["fileToUpload"]["name"];
+            if(!file_exists($check_file)) {
+                move_uploaded_file($file["fileToUpload"]["tmp_name"], $link);
+            }
             $connect = $this->connect();
             $query = "insert into image_product (product_id, link, state) value('".
                         $product_id."','".
@@ -37,30 +41,35 @@
         // Xoa anh
         function destroy($id) {
             $connect = $this->connect();
-            $result = $connect->query("delete from image_product where id = $id");
-            if($result) {
-                return "Xoa anh thanh cong";
-            }
-            else {
-                return "Xoa anh that bai";
+            $find = $connect->query("select * from image_product where id = $id");
+            if($find->num_rows >0) {
+                $img = mysqli_fetch_assoc($find);
+                // return $img;
+                $link = self::PATH_STORE."$img[link]";
+                unlink($link);
+                $result = $connect->query("delete from image_product where id = $id");
+                if($result) {
+                    return "Xoa anh thanh cong";
+                }
+                else {
+                    return "Xoa anh that bai";
+                }
             }
         }
-
-
     }
 
 
     $testImg_Product = new Image_Product();
     // test index
     // print_r($testImg_Product->index(2));
-    // $data = [
-    //     'link' => 'xyz.jpg',
-    //     'state' => '1',
-    // ];
+    $data = [
+        'link' => $_FILES["fileToUpload"]["name"],
+        'state' => '1',
+    ];
     // test store
-    // print_r($testImg_Product->store(2, $data));
+    print_r($testImg_Product->store(2, $data, $_FILES));
 
     //test delete
-    // print_r($testImg_Product->destroy(2));
+    // print_r($testImg_Product->destroy(17));
 
 ?>
