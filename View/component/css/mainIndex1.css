@@ -19,21 +19,13 @@
     padding: 10px 0;
 }
 
-.product-title a {
-    text-decoration: none;
+.product-title h2 {
+    display: inline;
     color: black;
     transition: 0.2s linear;
 }
 
 .product-title h2 {
-    display: inline;
-}
-
-.product-title a:hover {
-    color: rgb(243, 82, 82);
-}
-
-.product-title .title-name {
     font-size: 1.5em;
     border-bottom: 2px solid rgb(243, 82, 82); 
 }
