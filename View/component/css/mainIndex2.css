@@ -37,7 +37,7 @@
 
 .product-title .title-name {
     font-size: 1.5em;
-    border-bottom: 2px solid rgb(243, 82, 82); 
+    /* border-bottom: 2px solid rgb(243, 82, 82);  */
 }
 
 .product-title .see-all {

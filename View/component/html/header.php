@@ -1,5 +1,5 @@
 <style>
-    <?php include '../css/header.css' ?>
+    <?php include '../css/header.css'; ?>
 </style>
 <script src="https://kit.fontawesome.com/2ce63962ec.js" crossorigin="anonymous"></script>
 <div class="header">
@@ -13,7 +13,8 @@
             <a href="#"><img src="../img/logo-t.png" alt="logo ahm"></a>
         </div>
         <div class="hd-right">
-            <div id="loginid"><i class="fas fa-user-circle"></i><a onClick="on()">Đăng nhập</a></div>
+            <div id="loginid"><i class="fas fa-user-circle"></i><a onClick="clickLogin()">Đăng nhập</a></div>
+            <div id="registerid"><i class="far fa-registered"></i><a onClick="clickRegister()">Đăng ký</a></div>
             <div id="userid" class="user">
                 <span class="user-title"><i class="fas fa-user-circle"></i>Tài khoản</span>
                 <div class="user-setting">
@@ -41,9 +42,14 @@
         <li class="nav-item"><h1><a href="#">Trang sức cưới</a></h1></li>
     </ul>
 </div>
-<div id="overlay">
+<div id="overlay-login">
     <?php 
         include '../html/login.php'
+    ?>
+</div>
+<div id="overlay-register">
+    <?php 
+        include '../html/formCreateAccount.php'
     ?>
 </div>
 <script>
@@ -54,21 +60,31 @@
         x.parentNode.style.borderColor = "rgba(122, 120, 120, 0.151)";
     }
 
-    var isLogin = true;
+    var isLogin = false;
     if (isLogin) {
         document.getElementById("loginid").style.display = "none";
+        document.getElementById("registerid").style.display = "none";
         document.getElementById("userid").style.display = "inline-block";
     } else {
         document.getElementById("userid").style.display = "none";
         document.getElementById("loginid").style.display = "inline-block";
+        document.getElementById("registerid").style.display = "inline-block";
     }
-    var loginId = document.getElementById("overlay");
-    function on() {
+    var loginId = document.getElementById("overlay-login");
+    var registerId = document.getElementById("overlay-register");
+    
+    function clickLogin() {
         loginId.style.display = "block";
+    }
+    function clickRegister() {
+        registerId.style.display = "block";
     }
     window.onclick = function (event) {
         if (event.target == loginId) {
             loginId.style.display = "none";
+        }
+        if (event.target == registerId) {
+            registerId.style.display = "none";
         }
     }
     window.onscroll = function() {scrollFunction()};

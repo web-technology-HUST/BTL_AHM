@@ -42,7 +42,7 @@
     margin-right: 5px;
 }
 
-#loginid {
+#loginid, #registerid {
     display: inline-block;
     cursor: pointer;
 }
@@ -168,7 +168,7 @@
 }
 
 /* overlay login */
-#overlay {
+#overlay-login, #overlay-register {
     position: fixed;
     display: none;
     width: 100%;
@@ -182,14 +182,18 @@
     overflow: hidden;
 }
 
-#loginid-form {
+#loginid-form, #register-form {
     margin: 100px auto;
     width: 50%; 
     background-color: white;
     animation: animateLoginForm 0.6s
 }
 
+#register-form {
+    margin: 50px auto;
+}
+
 @keyframes animateLoginForm {
     from {transform: scale(0)}
     to {transform: scale(1)}
-  }
+}
