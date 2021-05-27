@@ -21,7 +21,7 @@
         // Them anh cho san pham
         function store($product_id, $data, $file) {
             $link = self::PATH_STORE.$data['link'];
-            $check_file = $link.$_FILES["fileToUpload"]["name"];
+            $check_file = $link.$file["fileToUpload"]["name"];
             if(!file_exists($check_file)) {
                 move_uploaded_file($file["fileToUpload"]["tmp_name"], $link);
             }

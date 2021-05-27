@@ -14,6 +14,9 @@
             }
             return $products;
         }
+
+        
+
         // Them san pham moi
         function store($data) {
             $connect = $this->connect();
@@ -72,6 +75,14 @@
                 return "Xoa san pham that bai";
             }
         }
+
+        // Tim san pham moi them
+        function findNewproduct() {
+            $connect = $this->connect();
+            $result = $connect->query("select * from products order by id desc limit 1");
+            $product = mysqli_fetch_assoc($result);
+            return $product;
+        }
     }
 
     // $testProduct = new Product();
@@ -105,6 +116,8 @@
     //     $target_file = "../upload/img_product/".$_FILES["fileToUpload"]["name"];
     //     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
     // }
+
+    // print_r($testProduct->findNewproduct());
 
 ?>
 
