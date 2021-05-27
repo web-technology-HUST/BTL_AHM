@@ -59,15 +59,15 @@
         }
     }
 
-    $testImg_Comment = new Image_Comment();
+    // $testImg_Comment = new Image_Comment();
     // test index
     // print_r($testImg_Comment->index(2));
-    $data = [
-        'link' => $_FILES["fileToUpload"]["name"],
-    ];
+    // $data = [
+    //     'link' => $_FILES["fileToUpload"]["name"],
+    // ];
     // test store
     // print_r($testImg_Comment->store(1, $data, $_FILES));
 
     //test delete
-    print_r($testImg_Comment->destroy(3));
+    // print_r($testImg_Comment->destroy(3));
 ?>

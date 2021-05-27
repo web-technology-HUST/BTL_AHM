@@ -52,13 +52,13 @@
         }
     }
 
-    $testCart = new Cart();
+    // $testCart = new Cart();
     // print_r($testCart->index(2));
-    $data = [
-        'user_id' => 2,
-        'product_id' => 4,
-        'amount' => 5,
-    ];
+    // $data = [
+    //     'user_id' => 2,
+    //     'product_id' => 4,
+    //     'amount' => 5,
+    // ];
     // print_r($testCart->store($data));
     // print_r($testCart->update(5, 3));
     // print_r($testCart->destroy(5));

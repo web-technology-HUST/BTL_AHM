@@ -59,15 +59,15 @@
     }
 
 
-    $testImg_Product = new Image_Product();
+    // $testImg_Product = new Image_Product();
     // test index
     // print_r($testImg_Product->index(2));
-    $data = [
-        'link' => $_FILES["fileToUpload"]["name"],
-        'state' => '1',
-    ];
+    // $data = [
+    //     'link' => $_FILES["fileToUpload"]["name"],
+    //     'state' => '1',
+    // ];
     // test store
-    print_r($testImg_Product->store(2, $data, $_FILES));
+    // print_r($testImg_Product->store(2, $data, $_FILES));
 
     //test delete
     // print_r($testImg_Product->destroy(17));
