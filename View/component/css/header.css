@@ -19,7 +19,11 @@
 }
 
 .hd-left, .hd-mid, .hd-right {
-    flex-grow: 4;
+    flex-basis: 33.33%;
+}
+
+.hd-mid {
+    text-align: center;
 }
 
 .hd-right {
@@ -50,6 +54,7 @@
 .user {
     display: none;
     position: relative;
+    right: 0;
 }
 
 .user-setting {
@@ -61,6 +66,9 @@
     transition: 2s linear;
     width: 180%;
     text-align: left;
+    z-index: 3;
+    width: 150px;
+    right: -10px;
 }
 
 .user-setting a {
@@ -85,7 +93,6 @@
 
 /* Search form */
 .search form{
-    display: inline-block;
     margin-top: 10px;
     border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
     display: flex;
@@ -168,7 +175,7 @@
 }
 
 /* overlay login */
-#overlay-login, #overlay-register {
+.overlap {
     position: fixed;
     display: none;
     width: 100%;
@@ -196,4 +203,139 @@
 @keyframes animateLoginForm {
     from {transform: scale(0)}
     to {transform: scale(1)}
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: white; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    border-bottom: solid 0.5px rgba(128, 128, 128, 0.308);
+}
+
+.sidenav a:hover {
+    color: rgba(243, 82, 82);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+}
+
+.closebtn {
+    font-size: 16px;
+}
+
+.hideNav {
+    display: none;
+}
+
+#symbolSideNav {
+    color: red;
+    z-index: 5;
+}
+
+/* Màng hình laptop hoặc desktop lớn*/
+@media (min-width: 1200px) {
+    .hideNav {
+        display: none;
+    }
+    .showNav {
+        display: block;
+    }
+    .hd-navigation-collection {
+        display: block;
+    }
+    .search {
+        display: block;
+    }
+}
+
+/* Màng hình máy tính bảng lớn hoặc máy tính màng hình trung bình */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hideNav {
+        display: inline;
+    }
+    .showNav {
+        display: none;
+    }
+    .hd-navigation-collection {
+        display: none;
+    }
+    .search {
+        display: block;
+    }
+    #loginIdA, #registerIdA, #userIdA, #cartIdA {
+        font-size: 1em;
+    }
+    #symbolSideNav {
+        font-size: 1.5em;
+    }
+}
+
+/* Màng hình máy tính bảng nhỏ hoặc máy tính màng hình nhỏ */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hideNav {
+        display: inline;
+    }
+    .showNav {
+        display: none;
+    }
+    .hd-navigation-collection {
+        display: none;
+    }
+    .search {
+        display: block;
+    }
+    #loginIdA i, #registerIdA i, #userIdA i, #cartIdA i {
+        font-size: 1.5em;
+    }
+    #symbolSideNav {
+        font-size: 1.5em;
+    }
+}
+
+/* Màng hình máy tính bảng rất nhỏ hoặc điện thoại di động */
+@media (max-width: 767px) {
+    .hideNav {
+        display: inline;
+    }
+    .showNav {
+        display: none;
+    }
+    .hd-navigation-collection {
+        display: none;
+    }
+    .search {
+        display: none;
+    }
+    #loginIdA i, #registerIdA i, #userIdA i, #cartIdA i {
+        font-size: 1.5em;
+    }
+}
+
+/* Điện thoại di động hoặc màng hình cực nhỏ */
+@media (max-width: 480px) {
+    #loginIdA i, #registerIdA i, #userIdA i, #cartIdA i {
+        font-size: 1em;
+    }
+    #loginIdA, #registerIdA, #userIdA, #cartIdA {
+        display: block;
+    }
 }

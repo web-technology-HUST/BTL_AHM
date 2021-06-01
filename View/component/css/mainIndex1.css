@@ -70,3 +70,37 @@
     height: 100%;
     border-right: solid 1px rgba(122, 120, 120, 0.151);
 }
+
+@media only screen and (max-width: 992px) {
+    .item-3-1 {
+        flex-grow: 2;
+        width: 100%;
+        height: inherit;
+    }
+    .item-main-index-1 > div {
+        width: 50%;
+    }
+    .product-title h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    * {
+        font-size: 14px;
+    }
+    .item-3-1 {
+        flex-grow: 2;
+        width: 100%;
+        height: inherit;
+    }
+    .item-main-index-1 > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-title h2 {
+        font-size: 10px;
+    }
+}

@@ -2,6 +2,11 @@
     <?php 
         include '../css/productDetail.css'
     ?> 
+    @media only screen and (max-width: 600px) {
+        .itemcontainer {
+            width: 50px;
+        }
+    }
 </style>
 <div class="item-container">
     <div class="item">

@@ -1,8 +1,8 @@
-* {
+/* * {
     box-sizing: border-box;
     font-size: 16px;
     font-family: sans-serif, Verdana, arial;
-}
+} */
 
 .show-list-product {
     margin: 0 auto;
@@ -91,4 +91,41 @@
 
 .show-products .item-container {
     border: solid 1px rgba(122, 120, 120, 0.151);
+}
+
+@media (max-width: 1200px) {
+    .show-products {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .show-products {
+        grid-template-columns: auto;
+    }
+    .product-title h2 {
+        font-size: 4px;
+    }
+
+    .mediaChange {
+        font-size: 5px;
+    }
+
+    .dropdown span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-title h2 {
+        font-size: 10px;
+    }
+
+    .mediaChange {
+        font-size: 14px;
+    }
+
+    .dropdown span {
+        font-size: 14px;
+    }
 }
