@@ -39,13 +39,13 @@
         var pageNumber = parseInt(pageNumberId.innerHTML);
         pageNumberId.innerHTML = --pageNumber;
         checkPage(pageNumber);
-        paginate(pageNumber-1);
+        paginate(pageNumber);
     }
     function next() {
         var pageNumber = parseInt(pageNumberId.innerHTML);
         pageNumberId.innerHTML = ++pageNumber;
         checkPage(pageNumber);
-        paginate(pageNumber+1);
+        paginate(pageNumber);
     }
     function paginate(val) {
       var xmlhttp = new XMLHttpRequest();
