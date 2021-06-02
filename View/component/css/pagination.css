@@ -1,15 +1,37 @@
-* {
+/* * {
     box-sizing: border-box;
     font-size: 16px;
     font-family: sans-serif, Verdana, arial;
-}
+} */
 
 .pagination {
-    margin: 0 auto;
-    padding-top: 20px;
+    display: inline-block;
 }
 
-.pagination .container {
-    width: 90%;
-    margin: auto;
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.enable:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.disable {
+    background-color: rgb(190, 184, 184);
+    border-radius: 5px;
+}
+
+.disable:hover {
+    background-color: rgb(190, 184, 184);
 }

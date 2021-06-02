@@ -28,7 +28,11 @@
                     include '../html/productDetail.php';
                 }
             ?>
-            
+        </div>
+        <div style="text-align:center;">
+            <?php
+                include '../html/pagination.php'
+            ?>
         </div>
     </div>
 </div>
