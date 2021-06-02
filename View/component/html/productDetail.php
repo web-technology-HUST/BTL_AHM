@@ -12,7 +12,7 @@
     <div class="item">
         <div class="item-img">
             <a href="#">
-                <img src="../img/nhan.jpg" alt="nhẫn nữ">
+                <img src="../img/djr3095-1.jpg" alt="nhẫn nữ">
             </a>
             <a class="detail" href="#">Chi tiết &rarr;</a>
         </div>

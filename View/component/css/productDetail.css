@@ -24,6 +24,8 @@
 .item-img img {
     padding: 10px;
     transition: 0.5s linear;
+    width: 80%;
+    height: auto;
 }
 
 .detail {
@@ -75,4 +77,18 @@
     color: rgb(243, 82, 82);
     margin-top: 7px;
     margin-bottom: 7px;
+}
+
+@media (max-width: 1199px) {
+    .item-name-and-price a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 480px) {
+
 }

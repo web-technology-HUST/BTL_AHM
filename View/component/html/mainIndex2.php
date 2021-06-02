@@ -13,12 +13,16 @@
                     <img src="../img/banner.jpg" alt="banner">
                 </a>
             </div>
-            <div class="item-main-index-2">
-                <?php 
-                    for ($i = 0; $i < 8; $i++) {
-                        include '../html/productDetail.php';
-                    }    
-                ?>
+            <div class="item-main-index-2 scroll">
+                <ul>
+                    <?php 
+                        for ($i = 0; $i < 8; $i++) {
+                            echo '<li>';
+                            include '../html/productDetail.php';
+                            echo '</li>';
+                        }    
+                    ?>
+                </ul>
             </div>
         </div>
     </div>

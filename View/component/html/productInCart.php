@@ -17,7 +17,7 @@
 </style>
 <div class="product-in-cart">
     <div class="item-in-cart clearfix">
-        <img src="../img/nhan-nu-1019182r4634vc2870-1-dXBsb2FkcHJvZHVjdG5oYW4tbnU=-small.jpg" alt="image">
+        <img src="../img/djr3095-1.jpg" alt="image">
         <div class="info-item-in-cart">
             <h2>NHẪN CITRINE GJR614</h2>
             <div>MSP : GJR614</div>

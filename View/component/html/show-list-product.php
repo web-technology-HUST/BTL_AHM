@@ -24,7 +24,7 @@
         </div>
         <div class="show-products">
             <?php 
-                for ($i = 0; $i < 16; $i++) {
+                for ($i = 0; $i < 12; $i++) {
                     include '../html/productDetail.php';
                 }
             ?>

@@ -28,8 +28,8 @@
             <tr>
                 <td class="label-input"><label for="gender"><b>Giới tính</b><span style="color: red">*</span></label></td>
                 <td>
-                    <input type="radio" name="gender" id="male" <?php if($gender == 1) echo "checked"; ?>>
-                    <label for="male">Nam</label>
+                    <input type="radio" name="gender" id="male" value="Nam" <?php if($gender == 1) echo "checked"; ?>>
+                    <!-- <label for="male">Nam</label> -->
                     <input type="radio" name="gender" id="female" <?php if($gender == 0) echo "checked"; ?>>
                     <label for="female">Nữ</label>
                 </td>
