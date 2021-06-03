@@ -4,14 +4,16 @@
         $pageCurrent = 1;
     ?>
 </style>
-<div class="pagination">
-    <a id="prevPage" style="cursor:pointer;" class="" onclick="previous()">
-        ❮
-    </a>
-    <a id="pageNumber" class="active"><?php echo $pageCurrent ?></a>
-    <a id="nextPage" class="" style="cursor:pointer;" onclick="next()">
-        ❯
-    </a>
+<div style="text-align:center;">
+    <div class="pagination">
+        <a id="prevPage" style="cursor:pointer;" class="" onclick="previous()">
+            ❮
+        </a>
+        <a id="pageNumber" class="active"><?php echo $pageCurrent ?></a>
+        <a id="nextPage" class="" style="cursor:pointer;" onclick="next()">
+            ❯
+        </a>
+    </div>
 </div>
 <script>
     var totalPage = 10;
@@ -54,7 +56,7 @@
           document.getElementById("demo").innerHTML = this.responseText;
         }
       };
-      xmlhttp.open("GET", "paginate.php?page=" + val, true);
+      xmlhttp.open("GET", "main.php", true);
       xmlhttp.send();
     }
   </script>

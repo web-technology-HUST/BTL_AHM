@@ -1,14 +1,15 @@
-* {
+/* * {
     box-sizing: border-box;
     font-size: 16px;
     font-family: sans-serif, Verdana, arial;
-}
+} */
 
 .form-create-account {
     width: 50%;
     margin: auto;
     padding: 10px;
     border-radius: 5px;
+    overflow: auto;
 }
 
 .form-create-account table {
@@ -47,4 +48,26 @@
 
 .form-create-account button:hover {
     background-color: rgb(243, 35, 35);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .form-create-account {
+        width: 70%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-create-account {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+
 }

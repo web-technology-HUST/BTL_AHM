@@ -16,9 +16,14 @@
             include '../html/header.php'
         ?>
         <img src="../img/ngoc-trai-1920x703-copy1.jpg" alt="banner" width="100%">
+        <divc id="demo">
+            <?php
+                include '../html/show-list-product.php';
+            ?>
+        </div>
         <?php
-            include '../html/show-list-product.php';
-            include '../html/mainFooter.php'
+            include '../html/pagination.php';
+            include '../html/mainFooter.php';
         ?>
     </div>
 </div>

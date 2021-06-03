@@ -32,8 +32,15 @@
 </head>
 <body>
     <?php include '../html/headerAdmin.php' ?>
+    <div id="demo">
+        <?php 
+            include '../html/show-list-product.php';
+        ?>
+    </div>
     <?php
-        include '../html/show-list-product.php';
+        include '../html/pagination.php'
+    ?>
+    <?php
         include '../html/mainFooter.php'
     ?>
 </body>

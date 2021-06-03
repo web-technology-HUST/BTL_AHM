@@ -29,11 +29,6 @@
                 }
             ?>
         </div>
-        <div style="text-align:center;">
-            <?php
-                include '../html/pagination.php'
-            ?>
-        </div>
     </div>
 </div>
 <script>
